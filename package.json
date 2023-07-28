@@ -1,8 +1,8 @@
 {
-  "name": "releaser-frontend",
+  "name": "vanilla-js-template",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
@@ -14,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.8.1",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "sass": "^1.64.1",
     "sass-loader": "^13.3.2",
