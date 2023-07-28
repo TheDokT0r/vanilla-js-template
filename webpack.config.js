@@ -17,13 +17,22 @@ module.exports = {
                     'css-loader',
                     'sass-loader',
                 ]
-            }
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ],
     },
 
-    // plugins: [
-    // new BundleAnalyzerPlugin()
-    // ],
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
+
+    plugins: [
+    new BundleAnalyzerPlugin()
+    ],
 
     devServer: {
         static: {

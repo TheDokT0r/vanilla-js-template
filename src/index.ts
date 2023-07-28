@@ -1,3 +1,5 @@
 import './index.scss';
 
-console.log('HRU?')
+const a:string = 'Hello World!';
+
+console.log(a)

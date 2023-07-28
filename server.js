@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // Route all requests to index.html to handle client-side routing (if you're using it)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Start the server
