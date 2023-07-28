@@ -2,11 +2,11 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-    mode: 'production',
-    entry: './src/index.js',
+    entry: './src/index.ts',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
     },
     module: {
         rules: [
@@ -22,14 +22,15 @@ module.exports = {
     },
 
     // plugins: [
-        // new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
     // ],
 
     devServer: {
         static: {
-          directory: path.join(__dirname, 'public'),
+            directory: path.join(__dirname, 'public'),
         },
         // compress: true,
         port: 3000,
+        hot: true
     },
 }
